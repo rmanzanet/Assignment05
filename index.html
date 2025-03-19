@@ -13,36 +13,36 @@
         input, select   {margin-bottom: 10px;}
         form            {width: 30%; padding: 20px;}
         body            {background-color: white;}
-.lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; /* Ensures it stays on top */
-}
-
-.lightbox-content {
-    background: rgb(160,160,160);
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    border-style: solid;
-    border-color: orange;
-    max-width: 400px; /* Adjust width as needed */
-    width: 90%;
-    position: relative; /* Prevents unintended shifting */
-}
-
-.close {
-    float: right;
-    cursor: pointer;
-    font-size: 20px;
-}
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000; /* Ensures it stays on top */
+        }
+        
+        .lightbox-content {
+            background: rgb(160,160,160);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            border-style: solid;
+            border-color: orange;
+            max-width: 400px; /* Adjust width as needed */
+            width: 90%;
+            position: relative; /* Prevents unintended shifting */
+        }
+        
+        .close {
+            float: right;
+            cursor: pointer;
+            font-size: 20px;
+        }
     button          {background-color: blue; color: white; border: none; padding: 10px 15px; cursor: pointer;}
     </style>
 </head>
@@ -50,31 +50,32 @@
     <body class="m-4">
         <h1>Employee Management System</h1>
         <div id="lightbox" class="lightbox">
-    <div class="lightbox-content">
-        <span class="close" onclick="document.getElementById('lightbox').style.display='none'">&times;</span>
-        <form id="empForm">
-            <label for="id">8-Digit Employee ID</label><br>
-            <input type="text" id="id" name="id" required maxlength="8"><br>
-            <label for="name">Full Name</label><br>
-            <input type="text" id="name" name="name" required><br>
-            <label for="ext">4-Digit Extension</label><br>
-            <input type="text" id="ext" name="ext" required maxlength="4"><br>
-            <label for="email">Email</label><br>
-            <input type="email" id="email" name="email" required><br>
-            <label for="department">Department</label><br>
-            <select id="department" name="department" required>
-                <option value="">Select a department</option>
-                <option value="Administrative">Administrative</option>
-                <option value="Engineering">Engineering</option>
-                <option value="Executive">Executive</option>
-                <option value="Marketing">Marketing</option>
-                <option value="Quality Assurance">Quality Assurance</option>
-                <option value="Sales">Sales</option>
-            </select><br>
-            
-            <button type="submit" id="submit">Add Employee</button><br><br>
-            <output id="addEmployee"></output>
-        </form>
-    </div></div>
+            <div class="lightbox-content">
+                <span class="close" onclick="document.getElementById('lightbox').style.display='none'">&times;</span>
+                <form id="empForm" style="width:100%;">
+                    <label for="id">8-Digit Employee ID</label><br>
+                    <input type="text" id="id" name="id" required maxlength="8"><br>
+                    <label for="name">Full Name</label><br>
+                    <input type="text" id="name" name="name" required><br>
+                    <label for="ext">4-Digit Extension</label><br>
+                    <input type="text" id="ext" name="ext" required maxlength="4"><br>
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" name="email" required><br>
+                    <label for="department">Department</label><br>
+                    <select id="department" name="department" required>
+                        <option value="">Select a department</option>
+                        <option value="Administrative">Administrative</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Executive">Executive</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Quality Assurance">Quality Assurance</option>
+                        <option value="Sales">Sales</option>
+                    </select><br>
+                
+                <button type="submit" id="submit">Add Employee</button><br><br>
+                <output id="addEmployee"></output>
+                </form>
+            </div>
+        </div>
     </body>
 </html>
