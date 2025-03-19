@@ -9,11 +9,12 @@
     <style>
         h1              {margin-bottom: 30px;}
         label           {font-weight: bold;}
-        input, select   {margin-bottom: 10px;}
+        input, select   {margin-bottom: 10px; width: 100%;} /* Ensure inputs fill container */
         form            {width: 100%; max-width: 400px; padding: 20px;}
         body            {background-color: white;}
+
         .lightbox {
-            display: none;  /* Hidden by default */
+            display: none;
             position: fixed;
             top: 0;
             left: 0;
@@ -21,7 +22,7 @@
             height: 100%;
             background: rgba(0, 0, 0, 0.5);
             justify-content: center;
-            align-items: left;
+            align-items: center;
             z-index: 1000;
         }
 
@@ -33,7 +34,7 @@
             border: solid orange;
             width: 100%;
             max-width: 400px;
-            text-align: left;
+            text-align: left; /* Ensure form labels and inputs are left-aligned */
             position: relative;
         }
 
