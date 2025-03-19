@@ -6,16 +6,19 @@ let department  = document.getElementById('department');            // THE DEPAR
 let submit      = document.getElementById('submit');                // THE ADD EMPLOYEE BUTTON
 
 window.addEventListener("load", () => {
-    const $ = (id) => document.getElementById(id);
-    
+    const $ = (id) => document.getElementById(id); // Helper function
+
     $("empForm").addEventListener("submit", (e) => {
-        e.preventDefault();
+        e.preventDefault(); // Prevents the form from actually submitting
+
+        // Collect and log form data
         console.log({
-            ID: $("id").value,
-            Name: $("name").value,
-            Extension: $("ext").value,
-            Email: $("email").value,
-            Department: $("department").value
+            id: $("id").value,
+            name: $("name").value,
+            ext: $("ext").value,
+            email: $("email").value,
+            department: $("department").value
         });
     });
 });
+
