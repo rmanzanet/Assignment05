@@ -22,7 +22,7 @@
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
     justify-content: center;
     align-items: center;
-    display: flex;
+    display: none;
 }
 
 .lightbox-content {
@@ -39,8 +39,8 @@ form {max-width: 400px; width: 90%}
     button          {background-color: blue; color: white; border: none; padding: 10px 15px; cursor: pointer;}
     </style>
 </head>
-
-    <body class="m-4">
+<button onclick="document.getElementById('lightbox').style.display='flex'">Open Form</button>    
+<body class="m-4">
         <h1>Employee Management System</h1>
         <div id="lightbox" class="lightbox">
     <div class="lightbox-content">
