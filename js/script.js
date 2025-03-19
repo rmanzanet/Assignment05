@@ -5,24 +5,25 @@ let email       = document.getElementById('email');                 // THE EMAIL
 let department  = document.getElementById('department');            // THE DEPARTMENT TEXT BOX
 let submit      = document.getElementById('submit');                // THE ADD EMPLOYEE BUTTON */
 
-window.addEventListener("load", () => {
-    console.log("Script loaded"); // Debugging
+window.addEventListener("DOMContentLoaded", () => {
+    console.log("Script loaded"); // ✅ Debugging message
 
-    const form = document.getElementById("empForm");
+    const form = document.querySelector("#empForm");
 
-    form.addEventListener("submit", (e) => {
-        e.preventDefault(); // Stops the form from submitting
-        console.log("Form submission prevented"); // Debugging
+    form.addEventListener("submit", (event) => {
+        event.preventDefault(); // 🚀 Stops form from submitting
 
-        // Collect form data
-        const formData = {
-            id: document.getElementById("id").value,
-            name: document.getElementById("name").value,
-            ext: document.getElementById("ext").value,
-            email: document.getElementById("email").value,
-            department: document.getElementById("department").value
-        };
+        // Get form values
+        const id = document.querySelector("#id").value;
+        const name = document.querySelector("#name").value;
+        const ext = document.querySelector("#ext").value;
+        const email = document.querySelector("#email").value;
+        const department = document.querySelector("#department").value;
 
-        console.log("Form Data:", formData); // Display values in console
+        // Log values
+        console.log({ id, name, ext, email, department });
+
+        // Optional: Clear form after submission
+        form.reset();
     });
 });
