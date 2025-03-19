@@ -5,11 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 5</title>
-   
-    <script>
-    console.log("Inline script is working");
-</script>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <style>
         h1                {margin-bottom: 30px;}
@@ -26,34 +21,35 @@
 </head>
 <button onclick="document.getElementById('lightbox').style.display='flex'">Open Form</button>    
 <body class="m-4">
-        <h1>Employee Management System</h1>
+    <h1>Employee Management System</h1>
         <div id="lightbox" class="lightbox">
-    <div class="lightbox-content">
-        <span class="close" onclick="document.getElementById('lightbox').style.display='none'">&times;</span>
-        <form id="empForm">
-            <label for="id">8-Digit Employee ID</label><br>
-            <input type="text" id="id" name="id" required maxlength="8"><br>
-            <label for="name">Full Name</label><br>
-            <input type="text" id="name" name="name" required><br>
-            <label for="ext">4-Digit Extension</label><br>
-            <input type="text" id="ext" name="ext" required maxlength="4"><br>
-            <label for="email">Email</label><br>
-            <input type="email" id="email" name="email" required><br>
-            <label for="department">Department</label><br>
-            <select id="department" name="department" required>
-                <option value="">Select a department</option>
-                <option value="Administrative">Administrative</option>
-                <option value="Engineering">Engineering</option>
-                <option value="Executive">Executive</option>
-                <option value="Marketing">Marketing</option>
-                <option value="Quality Assurance">Quality Assurance</option>
-                <option value="Sales">Sales</option>
-            </select><br>
-            
-            <button type="submit" id="submit">Add Employee</button><br><br>
-            <output id="addEmployee"></output>
-        </form>
-    </div></div>
+            <div class="lightbox-content">
+                <span class="close" onclick="document.getElementById('lightbox').style.display='none'">&times;</span>
+                <form id="empForm">
+                    <label for="id">8-Digit Employee ID</label><br>
+                    <input type="text" id="id" name="id" required maxlength="8"><br>
+                    <label for="name">Full Name</label><br>
+                    <input type="text" id="name" name="name" required><br>
+                    <label for="ext">4-Digit Extension</label><br>
+                    <input type="text" id="ext" name="ext" required maxlength="4"><br>
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" name="email" required><br>
+                    <label for="department">Department</label><br>
+                    <select id="department" name="department" required>
+                        <option value="">Select a department</option>
+                        <option value="Administrative">Administrative</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Executive">Executive</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Quality Assurance">Quality Assurance</option>
+                        <option value="Sales">Sales</option>
+                    </select><br>
+                    
+                    <button type="submit" id="submit">Add Employee</button><br><br>
+                    <output id="addEmployee"></output>
+                </form>
+            </div>
+        </div>
      <script src="js/script.js"></script>
     </body>
 </html>
