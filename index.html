@@ -13,37 +13,44 @@
         input, select   {margin-bottom: 10px;}
         form            {width: 30%; padding: 20px;}
         body            {background-color: white;}
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 200px;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-            justify-content: center;
-            align-items: center;
-            z-index: 1000; /* Ensures it stays on top */
-        }
-        
-        .lightbox-content {
-            background: rgb(160,160,160);
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-            border-style: solid;
-            border-color: orange;
-            max-width: 400px; /* Adjust width as needed */
-            width: 90%;
-            position: relative; /* Prevents unintended shifting */
-        }
-        
-        .close {
-            float: right;
-            cursor: pointer;
-            font-size: 20px;
-        }
-    button          {background-color: blue; color: white; border: none; padding: 10px 15px; cursor: pointer;}
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full screen width */
+    height: 100%; /* Full screen height */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Keeps lightbox on top */
+}
+
+.lightbox-content {
+    background: rgb(160,160,160);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-style: solid;
+    border-color: orange;
+    max-width: 400px; /* Limits the modal width */
+    width: 90%;
+    position: relative;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
     </style>
 </head>
 <button onclick="document.getElementById('lightbox').style.display='flex'">Open Form</button>
