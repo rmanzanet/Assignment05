@@ -12,7 +12,6 @@ window.addEventListener("DOMContentLoaded", () => {
         const department = document.querySelector("#department").value;
 
         // Log values
-        console.log("Employee Details:");
         console.log("ID: " + id);
         console.log("Name: " + name);
         console.log("Extension: " + ext);
